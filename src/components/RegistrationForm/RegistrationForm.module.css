@@ -1,0 +1,61 @@
+.formWrapper {
+  width: 630px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+}
+
+.inputWrapper input {
+  width: 300px;
+  height: 56px;
+
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+
+  color: #e0e0e0;
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 23px;
+
+  outline: none;
+
+  padding-left: 50px;
+  padding-top: 17px;
+  padding-bottom: 16px;
+  padding-right: 50px;
+}
+
+.inputWrapper input:hover,
+.inputWrapper input:focus {
+  border-color: #67d9b7;
+}
+
+.inputWrapper input:hover,
+.inputWrapper input:focus {
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 13px;
+  color: #67d9b7;
+}
+
+.left {
+  margin-right: 30px;
+}
+
+label {
+  position: relative;
+  left: 26px;
+  top: 38px;
+}
+
+.icon {
+  position: relative;
+  top: 44px;
+  left: 18px;
+}

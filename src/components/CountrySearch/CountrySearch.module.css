@@ -1,0 +1,37 @@
+.countriesList {
+  width: 300px;
+  height: 159px;
+  position: absolute;
+  z-index: 999;
+  overflow: scroll;
+
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+
+  display: none;
+}
+
+.hidden .countriesList {
+  /* display: none; */
+  /* position: absolute; */
+}
+
+/* .shown .countriesList {
+  display: block;
+  position: absolute;
+} */
+
+.icon {
+  position: relative;
+  top: 44px;
+  left: 18px;
+}
+
+.arrow {
+  position: relative;
+  top: -40px;
+  left: 255px;
+}
