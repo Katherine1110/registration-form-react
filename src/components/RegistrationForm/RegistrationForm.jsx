@@ -18,114 +18,128 @@ const RegistrationForm = () => {
       phone: '',
       password: '',
       checkbox: '',
+      country: '',
     },
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
     },
   });
   return (
-    <div className={style.formWrapper}>
+    <div className="wrapper">
       <form className={style.form} onSubmit={formik.handleSubmit}>
-        <div className={style.left}>
-          <div className={style.inputWrapper}>
-            <img className={style.icon} src={userIcon} alt="" />
-            <label htmlFor="firstName">First Name</label>
-            <input
-              id="firstName"
-              name="firstName"
-              type="text"
-              onChange={formik.handleChange}
-              value={formik.values.firstName}
-            />
-          </div>
-
-          <div className={style.inputWrapper}>
-            <CountrySelector />
-          </div>
-
-          <div className={style.inputWrapper}>
-            <img className={style.icon} src={envelope} alt="envelope" />
-            <label htmlFor="email">Email</label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              onChange={formik.handleChange}
-              value={formik.values.email}
-            />
-          </div>
-
-          <div className={style.inputWrapper}>
-            <img className={style.icon} src={padlock} alt="" />
-            <label htmlFor="password">Password</label>
-            <input
-              id="password"
-              name="password"
-              type="password"
-              onChange={formik.handleChange}
-              value={formik.values.password}
-            />
-          </div>
-          <div className={style.inputWrapper}>
-            <Button className={style.formBtn} />
-          </div>
+        <div className={style.inputWrapper}>
+          <img className={style.icon} src={userIcon} alt="" />
+          <input
+            className={style.input}
+            id="firstName"
+            name="firstName"
+            type="text"
+            onChange={formik.handleChange}
+            value={formik.values.firstName}
+          />
+          <label className={style.inputLabel} htmlFor="firstName">
+            First Name
+          </label>
+        </div>
+        <div className={style.inputWrapper}>
+          <img className={style.icon} src={usersIcon} alt="" />
+          <input
+            className={style.input}
+            id="lastName"
+            name="lastName"
+            type="text"
+            onChange={formik.handleChange}
+            value={formik.values.lastName}
+            placeholder=" "
+          />
+          <label className={style.inputLabel} htmlFor="lastName">
+            Last Name
+          </label>
         </div>
 
-        <div className={style.right}>
-          <div className={style.inputWrapper}>
-            <img className={style.icon} src={usersIcon} alt="" />
-            <label htmlFor="lastName">Last Name</label>
-            <input
-              id="lastName"
-              name="lastName"
-              type="text"
-              onChange={formik.handleChange}
-              value={formik.values.lastName}
-            />
-          </div>
+        <CountrySelector />
 
-          <div className={style.inputWrapper}>
-            <img className={style.icon} src={phoneIcon} alt="phoneIcon" />
-            <label className={style.phone} htmlFor="phone">
-              Phone
-            </label>
-            <input
-              id="phone"
-              name="phone"
-              type="tel"
-              onChange={formik.handleChange}
-              value={formik.values.phone}
-            />
-          </div>
-
-          <div className={style.inputWrapper}>
-            <img className={style.icon} src={padlockConfirm} alt="padlockConfirm" />
-            <label htmlFor="passwordConfirm">Confirm password</label>
-            <input
-              id="passwordConfirm"
-              name="passwordConfirm"
-              type="password"
-              onChange={formik.handleChange}
-              value={formik.values.password}
-            />
-          </div>
-
-          <div className={style.inputWrapper}>
-            <input
-              id="checkbox"
-              name="checkbox"
-              type="checkbox"
-              onChange={formik.handleChange}
-              value={formik.values.checkbox}
-            />
-            <label htmlFor="checkbox">
-              I agree to the{' '}
-              <a className="link" href="/">
-                Terms <span>&#38;</span> Conditions
-              </a>
-            </label>
-          </div>
+        <div className={style.inputWrapper}>
+          <img className={style.icon} src={phoneIcon} alt="phoneIcon" />
+          <input
+            className={style.input}
+            id="phone"
+            name="phone"
+            type="tel"
+            onChange={formik.handleChange}
+            value={formik.values.phone}
+            placeholder=" "
+          />
+          <label className={style.inputLabel} htmlFor="phone">
+            Phone
+          </label>
         </div>
+
+        <div className={style.inputWrapper}>
+          <img className={style.icon} src={padlock} alt="" />
+          <input
+            className={style.input}
+            id="password"
+            name="password"
+            type="password"
+            onChange={formik.handleChange}
+            value={formik.values.password}
+            placeholder=" "
+          />
+          <label className={style.inputLabel} htmlFor="password">
+            Password
+          </label>
+        </div>
+        <div className={style.inputWrapper}>
+          <img className={style.icon} src={padlockConfirm} alt="padlockConfirm" />
+          <input
+            className={style.input}
+            id="passwordConfirm"
+            name="passwordConfirm"
+            type="password"
+            onChange={formik.handleChange}
+            value={formik.values.password}
+            placeholder=" "
+          />
+          <label className={style.inputLabel} htmlFor="passwordConfirm">
+            Confirm password
+          </label>
+        </div>
+
+        <div className={style.inputWrapper}>
+          <img className={style.icon} src={envelope} alt="envelope" />
+          <input
+            className={style.input}
+            id="email"
+            name="email"
+            type="email"
+            onChange={formik.handleChange}
+            value={formik.values.email}
+            placeholder=" "
+          />
+          <label className={style.inputLabel} htmlFor="email">
+            Email
+          </label>
+        </div>
+
+        <div className={style.inputWrapper}>
+          <input
+            className={style.input}
+            id="checkbox"
+            name="checkbox"
+            type="checkbox"
+            onChange={formik.handleChange}
+            value={formik.values.checkbox}
+          />
+          <label className={style.inputLabel} htmlFor="checkbox">
+            I agree to the{' '}
+            <a className="link" href="/">
+              Terms <span>&#38;</span> Conditions
+            </a>
+          </label>
+        </div>
+
+        <Button />
       </form>
     </div>
   );

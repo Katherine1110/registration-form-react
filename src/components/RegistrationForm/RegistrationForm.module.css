@@ -1,61 +1,48 @@
-.formWrapper {
-  width: 630px;
-  height: 400px;
-  margin: 0 auto;
+.form {
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
 }
 
-.form {
+.wrapper {
+  /* position: relative; */
   display: flex;
 }
 
-.inputWrapper input {
-  width: 300px;
-  height: 56px;
+.input {
+  /* position: relative; */
+
+  /* width: 300px; */
+  /* height: 56px; */
+  padding: 17px 16px 16px 50px;
 
   background: rgba(0, 0, 0, 0.2);
   border: 1px solid #ffffff;
+  border-radius: 5px;
   box-sizing: border-box;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
-
-  color: #e0e0e0;
-  font-weight: 300;
-  font-size: 19px;
-  line-height: 23px;
-
-  outline: none;
-
-  padding-left: 50px;
-  padding-top: 17px;
-  padding-bottom: 16px;
-  padding-right: 50px;
-}
-
-.inputWrapper input:hover,
-.inputWrapper input:focus {
-  border-color: #67d9b7;
-}
-
-.inputWrapper input:hover,
-.inputWrapper input:focus {
-  font-weight: 300;
-  font-size: 11px;
-  line-height: 13px;
-  color: #67d9b7;
-}
-
-.left {
-  margin-right: 30px;
-}
-
-label {
-  position: relative;
-  left: 26px;
-  top: 38px;
 }
 
 .icon {
   position: relative;
-  top: 44px;
-  left: 18px;
+  left: 8.6%;
+  top: 10%;
 }
+
+.inputLabel {
+  position: relative;
+  right: 250px;
+}
+
+/* 
+.inputWrapper input:focus + label,
+.inputWrapper input:not(:placeholder-shown) + label {
+  position: relative;
+  top: -50px;
+  transition: 0.3s;
+
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 13px;
+  color: #67d9b7;
+} */

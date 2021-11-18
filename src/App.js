@@ -6,11 +6,13 @@ import RegistrationForm from './components/RegistrationForm/RegistrationForm';
 
 function App() {
   return (
-    <div className="container">
+    <>
       <Header />
-      <RegistrationForm />
+      <div className="container">
+        <RegistrationForm />
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }
 

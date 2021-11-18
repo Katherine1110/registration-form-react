@@ -1,7 +1,12 @@
+import style from './Footer.module.css';
+
 function Footer() {
   return (
-    <p>
-      If you have an account, <a href="#">Log In</a>
+    <p className={style.footer}>
+      If you have an account,{' '}
+      <a className={style.footerLink} href="/">
+        Log In
+      </a>
     </p>
   );
 }
