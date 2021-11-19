@@ -1,20 +1,15 @@
 .formWrapper {
   margin: 0 auto;
   width: 630px;
-  /* height: 400px; */
   position: relative;
 }
 
 .form {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
-  /* align-items: center; */
 }
 
 input {
-  /* position: relative; */
-
   width: 300px;
   height: 56px;
   box-sizing: border-box;
@@ -29,6 +24,17 @@ input {
 
   outline: none;
 }
+
+input:hover,
+input:focus {
+  border-color: #67d9b7;
+}
+
+/* input.inputLastName:focus + label.lastNameLabel,
+input.inputLastName:not(:placeholder-shown) + label.lastNameLabel {
+  color: #67d9b7;
+  top: 10px;
+} */
 
 input:not(:nth-last-child(-n + 2)) {
   margin-bottom: 30px;
@@ -54,13 +60,6 @@ input:not(:nth-last-child(-n + 2)) {
 }
 
 .inputCheckbox {
-  /* width: 20px;
-  height: 20px;
-  margin-right: 11px;
-  margin-top: 0px;
-  margin-left: 0px;
-  margin-bottom: 0px;
-  margin-right: 11px; */
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -121,8 +120,6 @@ input:not(:nth-last-child(-n + 2)) {
   position: absolute;
   top: 18px;
   left: 18px;
-  /* width: 20px;
-  height: 20px; */
 }
 
 .inputLastName {
@@ -139,11 +136,6 @@ input:not(:nth-last-child(-n + 2)) {
   position: absolute;
   top: 18px;
   left: 347px;
-  /* width: 22px;
-  height: 17px; */
-}
-
-.inputPhone {
 }
 
 .phoneLabel {
