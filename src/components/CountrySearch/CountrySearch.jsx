@@ -31,15 +31,13 @@ function CountrySelector() {
 
   const handleToggle = () => {
     setActive(!isActive);
-    console.log(isActive);
+    // console.log(isActive);
   };
 
   return (
-    <div className={style.countrySearchWrapper}>
-      <img className={style.locationIcon} src={locationIcon} alt="locationIcon" />
+    <>
       <input
         className={style.countryInput}
-        // className={style.input}
         type="text"
         id="name"
         value={name}
@@ -47,11 +45,11 @@ function CountrySelector() {
         onClick={handleToggle}
       />
 
+      <img className={style.locationIcon} src={locationIcon} alt="locationIcon" />
       <label className={style.countryLabel} htmlFor="name">
         Country
       </label>
       <img className={style.arrow} onClick={handleToggle} src={arrow} alt="arrow" />
-
       <ul className={`${style.countriesList} ${isActive ? style.hidden : style.active}`}>
         {foundCountry && foundCountry.length > 0 ? (
           foundCountry.map((country) => {
@@ -65,7 +63,7 @@ function CountrySelector() {
           <li>Wrong choice :(</li>
         )}
       </ul>
-    </div>
+    </>
   );
 }
 

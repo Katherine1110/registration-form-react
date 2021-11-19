@@ -1,52 +1,63 @@
-.countryInput {
+/* .countrySearchWrapper {
   position: relative;
-  /* width: 300px; */
+
+  width: 300px;
   height: 56px;
+
+} */
+.countryInput {
+  width: 300px;
+  height: 56px;
+  box-sizing: border-box;
 
   background: rgba(0, 0, 0, 0.2);
   border: 1px solid #ffffff;
-  box-sizing: border-box;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-}
 
-.searchWrapper input:hover,
-.searchWrapper input:focus {
-  border-color: #67d9b7;
-  transition: 0.3s;
-}
+  padding-left: 50px;
 
-.searchWrapper input:focus + label,
-.searchWrapper input:not(:placeholder-shown) + label {
-  /* position: relative;
-  top: -55px;
-  transition: 0.3s;
+  outline: none;
 
-  font-weight: 300;
-  font-size: 11px;
-  line-height: 13px;
-  color: #67d9b7; */
-}
-
-/* label {
   position: relative;
+  padding-top: 17px;
+  padding-bottom: 16px;
+  padding-left: 50px;
+  padding-right: 23px;
+
+  /* margin-bottom: 30px; */
+}
+
+.countryLabel {
+  position: absolute;
+  top: 104px;
   left: 50px;
-  top: -37px;
-  color: #e0e0e0;
+
+  font-family: Rubik;
+  font-style: normal;
   font-weight: 300;
   font-size: 19px;
   line-height: 23px;
-} */
 
-/* .icon {
-  position: relative;
-  top: 44px;
-  left: 18px;
-} */
+  color: #e0e0e0;
+}
 
-/* .arrow {
-  position: relative;
-  top: -40px;
-  left: 200px;
+.locationIcon {
+  position: absolute;
+  top: 104px;
+  left: 20px;
+  /* width: 17px;
+  height: 20px; */
+}
+
+.arrow {
+  position: absolute;
+  top: 104px;
+  left: 256px;
+}
+
+/* .searchWrapper input:focus + label,
+.searchWrapper input:not(:placeholder-shown) + label {
+ 
 } */
 
 .countriesList.hidden {
@@ -57,6 +68,8 @@
   display: block;
 
   position: absolute;
+  top: 142px;
+
   width: 300px;
   height: 159px;
   background: #ffffff;
@@ -75,6 +88,12 @@
   list-style: none;
   padding-left: 0;
   margin-top: 2px;
+
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+
+  color: #5e5e5e;
 }
 
 .listItem:hover,
@@ -87,14 +106,6 @@
   margin-left: 9px;
   transition: 0.3s;
   cursor: pointer;
-}
-
-.listItem {
-  font-style: normal;
-  font-weight: 300;
-  font-size: 15px;
-  line-height: 18px;
-  color: #5e5e5e;
 }
 
 .listItem:not(:last-child) {
