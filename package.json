@@ -1,5 +1,6 @@
 {
   "name": "registration-form-react",
+  "homepage": "https://Katherine1110.github.io/registration-form-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,8 +17,10 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "webpack serve",
+    "build": "webpack build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -40,6 +43,25 @@
     ]
   },
   "devDependencies": {
-    "@svgr/cli": "^5.5.0"
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "add": "^2.0.6",
+    "babel-loader": "^8.2.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.5.1",
+    "gh-pages": "^3.2.3",
+    "html-loader": "^3.0.1",
+    "html-webpack-plugin": "^5.5.0",
+    "node-sass": "^6.0.1",
+    "postcss-loader": "^6.2.0",
+    "postcss-preset-env": "^6.7.0",
+    "posthtml-load-config": "^2.0.0",
+    "posthtml-loader": "^2.0.1",
+    "sass-loader": "^12.3.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.62.1",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.5.0",
+    "yarn": "^1.22.17"
   }
 }

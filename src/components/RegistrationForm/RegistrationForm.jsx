@@ -1,3 +1,4 @@
+import React from 'react';
 import { useFormik } from 'formik';
 import Button from '../Button/Button';
 import CountrySelector from '../CountrySearch/CountrySearch';
@@ -139,7 +140,7 @@ const RegistrationForm = () => {
             onChange={formik.handleChange}
             value={formik.values.checkbox}
           />
-          <span class={style.checkMark}></span>
+          <span className={style.checkMark}></span>
           <label className={style.checkboxLabel} htmlFor="checkbox">
             I agree to the{' '}
             <a className={style.link} href="/">

@@ -1,3 +1,4 @@
+import React from 'react';
 import logo from '../../icons/bestRest.svg';
 import style from './Header.module.css';
 function Header() {
